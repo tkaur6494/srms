@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.insights" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>SRMS</name>
+    <description>
+        6iNSIGHTS Team - Application
+    </description>
+    <author email="info@6insights.com" href="https://6insights.com">
+        6iNSIGHTS Team
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+	<allow-navigation href="*" />
+    <platform name="android">
+        <allow-intent href="market:*" />
+		<edit-config xmlns:android="http://schemas.android.com/apk/res/android"  file="app/src/main/AndroidManifest.xml" mode="merge" target="/manifest/application">
+			<application android:usesCleartextTraffic="true" />
+		</edit-config>
+		<splash src="res/screen/android/drawable-land-hdpi/screen.png"  density="port-hdpi" />
+		<splash src="res/screen/android/drawable-land-ldpi/screen.png"  density="port-ldpi" />
+		<splash src="res/screen/android/drawable-land-mdpi/screen.png"  density="port-mdpi" />
+		<splash src="res/screen/android/drawable-land-xhdpi/screen.png"  density="port-xhdpi" />
+		<splash src="res/screen/android/drawable-land-xxhdpi/screen.png" density="port-xxhdpi"/>
+		<splash src="res/screen/android/drawable-hdpi/icon.png"          density="land-hdpi"/>
+		<splash src="res/screen/android/drawable-ldpi/icon.png"          density="land-ldpi"/>
+		<splash src="res/screen/android/drawable-mdpi/icon.png"          density="land-mdpi"/>
+		<splash src="res/screen/android/drawable-xhdpi/icon.png"  		 density="land-xhdpi"  />
+		<splash src="res/screen/android/drawable-xxhdpi/icon.png" 		  density="land-xxhdpi"/>
+    </platform>
+    <platform name="ios">
+        <allow-intent href="itms:*" />
+        <allow-intent href="itms-apps:*" />
+    </platform>
+    <plugin name="uk.co.workingedge.phonegap.plugin.launchnavigator" spec="5.0.4">
+        <variable name="GOOGLE_API_KEY_FOR_ANDROID" value="AIzaSyAmkTKsh4HFFl8aZ7AkhSGg9OdpDCRavHM" />
+        <variable name="OKHTTP_VERSION" value="3.+" />
+    </plugin> 
+    
+</widget>
